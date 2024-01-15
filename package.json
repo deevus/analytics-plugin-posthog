@@ -1,0 +1,43 @@
+{
+  "name": "analytics-plugin-posthog",
+  "version": "0.0.1",
+  "description": "PostHog plugin for Analytics",
+  "main": "dist/index.js",
+  "repository": "https://github.com/deevus/analytics-plugin-posthog",
+  "author": "Simon Hartcher <simon@simonhartcher.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@commitlint/cli": "^15.0.0",
+    "@commitlint/config-conventional": "^15.0.0",
+    "@types/bun": "^1.0.1",
+    "@types/node": "^20.11.3",
+    "@typescript-eslint/eslint-plugin": "^4.17.0",
+    "@typescript-eslint/parser": "^4.17.0",
+    "analytics": "^0.8.9",
+    "eslint": "^7.21.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^12.1.2",
+    "prettier": "^3.2.2",
+    "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "analytics": "^0.7.3"
+  },
+  "scripts": {
+    "dev": "bun --watch bun.build.ts",
+    "build": "bun bun.build.ts",
+    "postbuild": "bun run types",
+    "prepare": "husky install",
+    "ci": "bun install && bun run build",
+    "types": "bunx --bun tsc"
+  },
+  "types": "./dist/index.d.ts",
+  "lint-staged": {
+    "*": [
+      "prettier --write --ignore-unknown"
+    ]
+  },
+  "dependencies": {
+    "posthog-js": "^1.100.0"
+  }
+}
