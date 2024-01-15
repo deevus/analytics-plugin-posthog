@@ -34,7 +34,7 @@
   "types": "./dist/index.d.ts",
   "lint-staged": {
     "*": [
-      "prettier --write --ignore-unknown"
+      "bunx prettier --write --ignore-unknown"
     ]
   },
   "dependencies": {
