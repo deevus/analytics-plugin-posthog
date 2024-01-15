@@ -26,7 +26,7 @@ export interface PostHogPluginBrowserInstance {
 
 const posthogPlugin = (config: PostHogPluginConfig): AnalyticsPlugin => {
   return {
-    name: 'posthog',
+    name: "posthog",
     config,
 
     initialize({ config }: Params): void {
@@ -35,13 +35,13 @@ const posthogPlugin = (config: PostHogPluginConfig): AnalyticsPlugin => {
       }
 
       posthog.init(config.token, {
-        api_host: config.apiHost ?? 'https://us.posthog.com',
+        api_host: config.apiHost ?? "https://us.posthog.com",
         autocapture: false,
       });
     },
 
     page: ({ payload }: Params) => {
-      posthog.capture('$pageview', payload.properties);
+      posthog.capture("$pageview", payload.properties);
     },
 
     track: ({ payload }: Params) => {
