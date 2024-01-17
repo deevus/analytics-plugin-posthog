@@ -1,6 +1,6 @@
 {
   "name": "analytics-plugin-posthog",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "PostHog plugin for Analytics",
   "main": "dist/index.js",
   "repository": "https://github.com/deevus/analytics-plugin-posthog",
