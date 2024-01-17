@@ -20,10 +20,6 @@ interface Params {
   instance: AnalyticsInstance;
 }
 
-export interface PostHogPluginBrowserInstance {
-  conversion(conversion_id: string): void;
-}
-
 const posthogPlugin = (config: PostHogPluginConfig): AnalyticsPlugin => {
   return {
     name: "posthog",
