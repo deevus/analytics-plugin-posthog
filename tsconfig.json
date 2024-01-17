@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
-    "outDir": "./dist",       // Output directory for all emitted files
-    "rootDir": "./src",       // Root directory of your source files
-    "declaration": true,      // Generates corresponding '.d.ts' file
-    "emitDeclarationOnly": true, // Only emit declaration files
-    "strict": true            // Enable all strict type-checking options
+    "outDir": "./dist", // Output directory for all emitted files
+    "rootDir": "./src", // Root directory of your source files
+    "declaration": true, // Generates corresponding '.d.ts' file
+    "emitDeclarationOnly": false, // Only emit declaration files
+    "strict": true // Enable all strict type-checking options
   },
-  "include": ["src/**/*"],   // Include all files in the src directory
+  "include": ["src/**/*"], // Include all files in the src directory
   "exclude": ["node_modules"] // Exclude the node_modules directory
 }
